@@ -21,10 +21,10 @@ document.addEventListener('mousemove', handleMouse);
 
 function handleMouse(e) {
     e = e || window.event;
-    if (e.pageY > 30 && e.pageY < (canvas.height - 30)) {
+    if (e.pageY > size && e.pageY < (canvas.height - size)) {
         y = e.pageY;
     }
-    if (e.pageX > 30 && e.pageX < (canvas.width - 30)) {
+    if (e.pageX > size && e.pageX < (canvas.width - size)) {
         x = e.pageX;
     }
     // console.log("mousex: " + e.pageX + " mousey: " + e.pageY);
@@ -36,22 +36,22 @@ function handleKey(e) {
     const keyPressed = e.key
     switch (keyPressed) {
         case 'w':
-            if (y > 30) {
+            if (y > size) {
                 y--;
             }
             break;
         case 'a':
-            if (x > 30) {
+            if (x > size) {
                 x--;
             }
             break;
         case 's':
-            if (y < (canvas.height - 30)) {
+            if (y < (canvas.height - size)) {
                 y++;
             }
             break;
         case 'd':
-            if (x < (canvas.width - 30)) {
+            if (x < (canvas.width - size)) {
                 x++;
             }
             break;
